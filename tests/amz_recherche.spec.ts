@@ -6,4 +6,3 @@ test('test', async ({ page }) => {
   await page.keyboard.press('Enter');
   //await page.getByRole('searchbox', { name: 'Search Amazon.fr' }).press('Enter');
 });
-//https://demoqa.com/buttons

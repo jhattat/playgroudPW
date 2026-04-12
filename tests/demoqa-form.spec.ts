@@ -3,7 +3,8 @@ import { test, expect } from '@playwright/test';
 test('test', async ({ page }) => {
   await page.goto('https://demoqa.com/');
   await page.getByRole('link', { name: 'Elements' }).click();
-  await page.getByRole('link', { name: 'Text Box' }).click();
+  //await page.getByRole('link', { name: 'Text Box' }).click();
+  await page.getByRole('listitem').filter({ hasText: 'Text Box' }).click();
   //await page.getByRole('textbox', { name: 'Full Name' }).click();
   await page.getByRole('textbox', { name: 'Full Name' }).fill('Exemple !');
   await page.getByRole('textbox', { name: 'Full Name' }).press('Tab');
